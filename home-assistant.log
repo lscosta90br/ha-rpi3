@@ -1,2 +1,3 @@
 2019-04-22 11:54:02 WARNING (Recorder) [homeassistant.components.recorder] Ended unfinished session (id=55 from 2019-04-22 00:55:59.157103)
 2019-04-22 11:54:03 ERROR (MainThread) [homeassistant.components.device_tracker] Unable to load /config/known_devices.yaml: Config file not found: /config/known_devices.yaml
+2019-04-22 12:54:02 ERROR (MainThread) [homeassistant.components.updater] Got unexpected response: None
