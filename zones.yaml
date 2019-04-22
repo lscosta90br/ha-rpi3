@@ -1,0 +1,30 @@
+### Zones ###
+- name: Trabalho
+  latitude: !secret t_latitude
+  longitude: !secret t_longitude
+  radius: !secret t_radius
+  icon: mdi:worker
+
+- name: CasaDiego
+  latitude: !secret cd_latitude
+  longitude: !secret cd_longitude
+  radius: !secret cd_radius
+  icon: mdi:robot  
+
+- name: CasaCafy
+  latitude: !secret ccy_latitude
+  longitude: !secret ccy_longitude
+  radius: !secret ccy_radius
+  icon: mdi:rocket
+
+- name: USPFOB1
+  latitude: !secret uspf1_latitude
+  longitude:  !secret uspf1_longitude
+  radius:  !secret uspf1_radius
+  icon: mdi:rocket
+
+- name: USPFOB2
+  latitude:  !secret uspf2_latitude
+  longitude:  !secret uspf2_longitude
+  radius: !secret uspf2_radius
+  icon: mdi:rocket
