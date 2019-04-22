@@ -54,8 +54,6 @@ git reset -–hard
 
 ```
 
-## Exemplo desenvolvedor 2
-
 ### fazendo macete para levar o arquivos .git para o diretorio z:\
 
 ```
