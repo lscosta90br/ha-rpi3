@@ -1,0 +1,17 @@
+alias: "Chromecast Lights On After Playing At Night"
+trigger:
+  - platform: state
+    entity_id: media_player.bcrcc
+    state: "off"
+  - platform: state
+    entity_id: media_player.osmc
+    state: "idle"
+condition:
+  - condition: sun
+    after: sunset
+    after_offset: "-1:30:00"
+  - condition: state
+    entity_id: input_select.media_lockout
+    state: "disabled"
+action:
+  service: script.media_stopped_night

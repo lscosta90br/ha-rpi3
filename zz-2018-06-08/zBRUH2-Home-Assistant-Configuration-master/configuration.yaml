@@ -1,0 +1,81 @@
+homeassistant:
+  name: Home
+  latitude: !secret latitude_loc_home
+  longitude: !secret longitude_loc_home
+  temperature_unit: F
+  time_zone: America/New_York
+  customize: !include customize.yaml
+
+zone:
+  name: Work
+  latitude: !secret latitude_loc_work
+  longitude: !secret longitude_loc_work
+  radius: 250
+  icon: mdi:worker
+
+mqtt:
+  broker: 192.168.1.118
+  port: 1883
+  client_id: home-assistant-1
+  keepalive: 60
+  username: !secret mqtt_user
+  password: !secret mqtt_password
+
+
+http:
+  api_password: !secret http_password
+  ssl_certificate: !secret ssl_path
+  ssl_key: !secret ssl_key
+
+ifttt:
+  key: !secret ifttt_key
+
+zwave:
+  usb_path: /dev/ttyACM0
+  config_path: /srv/hass/hass_venv/lib/python3.4/site-packages/libopenzwave-0.3.1-py3.4-linux-armv7l.egg/config
+
+####################################################
+#                                                  #
+#                     Includes             #
+#                                                  #
+####################################################
+
+###  Devices  ###
+alexa: !include alexa.yaml
+camera: !include cameras.yaml
+device_tracker: !include device_trackers.yaml
+light: !include lights.yaml
+media_player: !include media_players.yaml
+sensor: !include sensors.yaml
+binary_sensor: !include binary_sensors.yaml
+switch: !include switches.yaml
+alarm_control_panel: !include alarm_control_panel.yaml
+automation: !include automation.yaml
+group: !include groups.yaml
+#input_boolean: !include input_boolean.yaml
+input_select: !include input_select.yaml
+notify: !include notify.yaml
+scene: !include scenes.yaml
+script: !include scripts.yaml
+shell_command: !include shell_commands.yaml
+
+####################################################
+#                                                  #
+#                     Enables             #
+#                                                  #
+####################################################
+logger:
+history:
+discovery:
+sun:
+conversation:
+logbook:
+frontend:
+
+#hdmi_cec:
+#  devices:
+#    1: TV
+#    2:
+#      1: Chromecast
+#      2: PC
+#      3: Pi

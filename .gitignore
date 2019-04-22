@@ -14,6 +14,8 @@ questionario.code-workspace*
 .google.token
 .HA_VERSION
 secrets.yaml
+home-assistant_*.db
+
 ##### FIM - exclusao homeassistant
 
 #pycharm

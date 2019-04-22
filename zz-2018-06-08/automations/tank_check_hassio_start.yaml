@@ -1,0 +1,60 @@
+alias: "Checa os sensores tank dagua iniciar Hassio"
+id: "che001"
+trigger:
+  - platform: homeassistant
+    event: start
+action:
+  - service: mqtt.publish
+    data:
+      topic: "cmnd/tank3000/power1"
+      payload: ""
+  - service: mqtt.publish
+    data:
+      topic: "cmnd/tank3000/power2"
+      payload: ""
+  - service: mqtt.publish
+    data:
+      topic: "cmnd/tank1000/power2"
+      payload: ""
+  - service: mqtt.publish
+    data:
+      topic: "cmnd/tank1000/power3"
+      payload: ""
+
+# id: cdb001
+# alias: "Liga Bomba - tudo ok"
+# trigger:
+  # - platform: state
+    # entity_id: switch.tank3000_sensor_baixo
+    # from: 'ON'
+    # to: 'OFF'
+# condition:
+  # condition: and
+  # conditions:
+    # - condition: state
+      # entity_id: switch.tank3000_sensor_top
+      # state: 'OFF'
+    # - condition: state
+      # entity_id: switch.tank1000_sensor_baixo
+      # state: 'ON'
+# action: 
+  # service: switch.turn_on
+  # entity_id: switch.tank1000_relay    
+
+# id: upd001
+# alias: 'Update Available Notifications'
+# trigger:
+  # platform: state
+  # entity_id: updater.updater
+# action:
+  # service: notify.notify
+  # data:
+    # message: 'Update for Home Assistant is available.'
+    
+ # switch.tank1000_relay
+ # switch.tank1000_sensor_baixo
+ # switch.tank1000_sensor_top
+ 
+ # switch.tank3000_sensor_baixo
+ # switch.tank3000_sensor_top	
+ 

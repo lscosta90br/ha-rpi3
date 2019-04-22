@@ -1,0 +1,1 @@
+echo  '{ "command": "clearall"}' | nc 192.168.1.125 19444

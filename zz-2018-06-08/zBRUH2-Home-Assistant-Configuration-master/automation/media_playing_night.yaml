@@ -1,0 +1,24 @@
+alias: "Media Lights Off While Playing at Night"
+trigger:
+  - platform: state
+    entity_id: media_player.bcrcc
+    state: "playing"
+  - platform: state
+    entity_id: media_player.osmc
+    from: "idle"
+    to: "playing"
+  - platform: state
+    entity_id: media_player.osmc
+    from: "paused"
+    to: "playing"
+condition:
+  - condition: sun
+    after: sunset
+    after_offset: "-1:30:00"
+  - condition: state
+    entity_id: input_select.media_lockout
+    state: "disabled"
+  - condition: template
+    value_template: "{% if states('sensor.party_button') != 'PARTY TIME' or states('sensor.party_button') != 'Sexy Time'  or states('sensor.party_button') != 'ALARM'  %}true{% else %}false{% endif %}"
+action:
+  service: script.media_playing_night

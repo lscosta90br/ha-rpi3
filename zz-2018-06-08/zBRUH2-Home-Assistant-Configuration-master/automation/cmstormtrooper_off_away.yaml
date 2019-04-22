@@ -1,0 +1,13 @@
+alias: "CMStormtrooper Off"
+trigger:
+  - platform: state
+    entity_id: device_tracker.ben6p_ben6p
+    from: "home"
+    to: "not_home"
+condition:
+  - condition: state
+    entity_id: input_select.lock_pc
+    state: "disabled"
+action:
+  service: switch.turn_off
+  entity_id: switch.pc_power

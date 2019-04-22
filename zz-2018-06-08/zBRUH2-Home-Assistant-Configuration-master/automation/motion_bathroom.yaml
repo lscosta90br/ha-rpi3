@@ -1,0 +1,11 @@
+alias: "motion light during night time"
+trigger:
+  - platform: state
+    entity_id: sensor.btr_motion
+    state: "motion detected"
+condition:
+  - condition: numeric_state
+    entity_id: sensor.btr_light
+    above: 900
+action:
+  service: script.motion_bathroom

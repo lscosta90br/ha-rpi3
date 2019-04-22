@@ -1,0 +1,36 @@
+# If you select "Rain", play the "rain.mp3" file
+- alias: Play Rain Lullaby
+  trigger:
+    platform: state
+    entity_id: input_select.lullaby
+    to: "Rain"
+  action:
+    service: media_player.play_media
+    data:
+      entity_id: media_player.nursery
+      media_id: http://www.soundjay.com/nature/sounds/rain-07.mp3
+      media_type: audio/mp4
+
+# If you select "Babbling Brook", play the "babbling_brook.mp3" file
+- alias: Play Babbling Brook Lullaby
+  trigger:
+    platform: state
+    entity_id: input_select.lullaby
+    to: "Babbling Brook"
+  action:
+    service: media_player.play_media
+    data:
+      entity_id: media_player.nursery
+      media_id: http://www.soundjay.com/nature/sounds/stream-3.mp3
+      media_type: audio/mp4
+
+# If you select "None, turn the Chromecast off
+- alias: Stop the Lullaby
+  trigger:
+    platform: state
+    entity_id: input_select.lullaby
+    to: "None"
+  action:
+    service: media_player.turn_off
+    data:
+      entity_id: media_player.nursery

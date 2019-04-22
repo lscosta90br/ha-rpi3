@@ -1,0 +1,14 @@
+alias: "Alarm Trigger Nighttime"
+trigger:
+  - platform: state
+    entity_id: sensor.gocontrol_door_1
+    state: "open"
+  - platform: state
+    entity_id: sensor.gocontrol_door_2
+    state: "open"
+condition:
+  - condition: state
+    entity_id: alarm_control_panel.alarm
+    state: "armed_home"
+action:
+  service: script.alarm_triggered

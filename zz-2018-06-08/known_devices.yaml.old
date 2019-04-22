@@ -1,0 +1,33 @@
+
+
+celularlc_celular:
+  hide_if_away: true
+  icon:
+  mac:
+  name: celular-lc
+  picture:
+  track: false
+
+celularlc_celle:
+  hide_if_away: true
+  icon:
+  mac:
+  name: celular-lc
+  picture:
+  track: false
+
+celularlc_leandro:
+  hide_if_away: false
+  icon:
+  mac:
+  name: celular-lc
+  picture:
+  track: true
+
+oneplus5:
+  name: LeandroCosta
+  mac: f4:f5:24:b5:40:27
+  picture: https://home-assistant.io/images/favicon-192x192.png 
+  gravatar: lscosta@gmail.com
+  track: yes
+  hide_if_away: no

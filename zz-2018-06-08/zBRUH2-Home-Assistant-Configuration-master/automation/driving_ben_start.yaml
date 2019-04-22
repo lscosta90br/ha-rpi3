@@ -1,0 +1,11 @@
+alias: "Ben Driving"
+trigger:
+  platform: state
+  entity_id: input_select.ben_status
+  state: "driving"
+condition:
+  - condition: time
+    after: '14:00:00'
+    before: '19:00:00'
+action:
+  service: script.driving_ben_start

@@ -1,0 +1,11 @@
+- platform: mjpeg
+  mjpeg_url: http://192.168.1.112:10010/videostream.cgi
+  name: Front Door
+  username: !secret camera_username
+  password: !secret camera_password
+##CAMERA 2
+- platform: mjpeg
+  mjpeg_url: http://192.168.1.123:10001/videostream.cgi
+  name: Porch
+  username: !secret camera_username
+  password: !secret camera_password 

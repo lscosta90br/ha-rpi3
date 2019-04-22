@@ -1,0 +1,220 @@
+  default_view:
+    name: Principal
+    icon: mdi:menu
+    # view: yes
+    entities:
+      - sun.sun
+
+      
+  Menu_Oficina_Luz:
+    name: Oficina luzes interna
+    icon: mdi:towing
+    view: no
+    entities:
+      - light.luz_oficina_1__dves_2214 
+      - light.luz_oficina_2__dves_2222 
+      - light.luz_oficina_4__dves_2295 
+      - light.luz_2a_andar__dves_2223
+      
+  Menu_Oficina_Luz_View:
+    name: Oficina
+    view: yes
+    icon: mdi:towing
+    entities:
+      - group.Menu_Oficina_Luz
+      # - light.regua_oficina_1__dves_2296
+      
+      
+      
+  Menu_Tank_Terreo:
+    name: Tank1000 Ground floor
+    view: no
+    icon: mdi:package-variant-closed
+    entities:
+      - switch.tank1000_relay
+      - switch.tank1000_sensor_up
+      - switch.tank1000_sensor_down
+  Menu_Tank_2andar:
+    name: Tank3000 2a. floor
+    view: no
+    icon: mdi:package-variant-closed
+    entities:
+      - switch.tank3000_sensor_up
+      - switch.tank3000_sensor_down
+  Menu_Tank_All:
+    name: Tank All
+    view: yes
+    icon: mdi:package-variant-closed
+    entities:
+      - group.menu_tank_2andar
+      - group.menu_tank_terreo      
+      
+  portao_garagem:
+    name: Portão Garagem 
+    view: no
+    icon: mdi:garage
+    control: hidden
+    entities:
+      - cover.garagem_lc
+
+  date_and_time:
+    view: yes
+    icon: mdi:update
+    entities:
+      - group.date_time
+  date_time:
+    name: Date and Time
+    entities:
+      - sensor.time
+      - sensor.date
+      - sensor.date__time
+      - sensor.time__date
+      - sensor.time_utc
+      - sensor.google_travel_time__driving
+      - sensor.internet_time
+      - sensor.yr_symbol
+
+##### Menu Localizacao
+  LocalizacaoOwntrack:
+    view: no  
+    icon: mdi:account-multiple
+    entities: 
+      - group.LocalizacaoOwntracks
+  LocalizacaoOwntracks:    
+    name: Localizacao por Owntracks
+    entities:
+      - device_tracker.leandrocosta_101
+      - device_tracker.diegoestevam_102
+      - device_tracker.carmencosta_103
+      - device_tracker.cybellefontes_104
+  LocalizacaoRede:
+    view: no  
+    icon: mdi:account-multiple
+    entities: 
+      - group.LocalizacaoRedes
+  LocalizacaoRedes:    
+    name: Redes devices
+    entities:
+      - device_tracker.android22d4569e7b1daf51lan
+      - device_tracker.magnetolan
+      - device_tracker.deadpoolw10lan
+      - device_tracker.f4f524b54027
+      - device_tracker.androidffeab82361eb4f69lan
+      - device_tracker.ec086bbae72c
+      - device_tracker.ec086bbae72b
+      - device_tracker.stormnbmarvelscorp
+  Localizacoes:
+    name: Todas localizacoes
+    view: yes
+    icon: mdi:account-multiple
+    entities:
+      - group.LocalizacaoOwntracks
+      - group.LocalizacaoRedes
+
+##### Menu Sanoff      
+  sonoff:
+    view: yes  
+    icon: mdi:lightbulb-on
+    entities: 
+      - group.sonoffs
+  sonoffs:    
+    name: Sonoff
+    entities:
+      - sensor.wemosd12225_humidade_
+      - sensor.wemosd12225_temperatura_c
+      - sensor.zzzsonoff2212_humidade_
+      - sensor.zzzsonoff2212_intensidade_luz_
+      - sensor.zzzsonoff2212_qualidade_do_ar_
+      - sensor.zzzsonoff2212_ruido_
+      - sensor.zzzsonoff2212_temperatura_c
+
+##### Menu Media      
+  media:
+    view: yes  
+    icon: mdi:bookmark-music
+    entities: 
+      - group.medias
+  medias:    
+    name: TV Sony Salas
+    entities:
+      - switch.tv_sony_sala   
+      - media_player.mibox3    
+
+##### Menu Scripts      
+  scripts:
+    view: yes  
+    icon: mdi:format-subscript
+    entities: 
+      - script.refresh_devices
+
+##### Menu automacao      
+  AutomacaoOwntrack:
+    view: no
+    icon: mdi:home-automation
+    entities:
+      - group.AutomacaoOwntracks
+  AutomacaoOwntracks:
+    name: Automação Owntracks
+    entities:
+      - automation.owntracks_refresh    
+  AutomacaoGeral:
+    view: no
+    icon: mdi:home-automation
+    entities:
+      - group.AutomacaoGeral
+  AutomacaoGerals:
+    name: Geral
+    entities:
+      - automation.update_available_notifications    
+  Automacao:
+    name: Automações
+    view: yes
+    icon: mdi:home-automation
+    entities:
+      - group.AutomacaoOwntracks
+      - group.AutomacaoGerals
+
+##### Menu Regua de medição branca
+  ReguaMedicaoB:
+    view: no  
+    icon: mdi:washing-machine
+    entities: 
+      - group.reguamedicoesb
+  reguamedicoesb:    
+    name: Regua de Medicao Branca
+    entities:
+      - light.regua_oficina_1__dves_2296          
+      - sensor.sonoff2296_voltage
+      - sensor.sonoff2296_power
+      - sensor.sonoff2296_current      
+      - sensor.sonoff2296_energy_today
+      - sensor.sonoff2296_energy_yesterday
+      - sensor.sonoff2296_energy_total
+      - sensor.sonoff2296_power_factor
+##### Menu Regua de medição laranja
+  ReguaMedicaoL:
+    view: no
+    icon: mdi:washing-machine
+    entities: 
+      - group.reguamedicoesl
+  reguamedicoesl:   
+    name: Regua de Medicao Laranja
+    entities:
+      - light.regua_laranja__dves_2218          
+      - sensor.sonoff2218_voltage
+      - sensor.sonoff2218_power
+      - sensor.sonoff2218_current      
+      - sensor.sonoff2218_energy_today
+      - sensor.sonoff2218_energy_yesterday
+      - sensor.sonoff2218_energy_total
+      - sensor.sonoff2218_power_factor      
+##### Menu Regua de medição branca e laranja
+  reguamedicoes:
+    name: Todas reguas medicoes
+    view: yes
+    icon: mdi:washing-machine
+    entities:
+      - group.reguamedicoesb
+      - group.reguamedicoesl
+      
+      

@@ -1,0 +1,157 @@
+- platform: forecast
+  api_key: !secret forecast_api_key
+  monitored_conditions:
+    - summary
+    - precip_type
+    - precip_intensity
+    - precip_probability
+    - temperature
+    - apparent_temperature
+    - dew_point
+    - wind_speed
+    - wind_bearing
+    - cloud_cover
+    - humidity
+    - pressure
+    - visibility
+#sensor 2
+- platform: time_date
+  display_options:
+    - "date_time"
+#sensor 3
+- platform: mqtt
+  state_topic: "bruh/lr/pir"
+  name: "LR Motion"
+#  payload_on: "motion detected"
+#  payload_off: "standby"
+#sensor 4
+- platform: mqtt
+  state_topic: "bruh/lr/temperature"
+  name: "LR Temperature"
+  unit_of_measurement: "F"
+  value_template: "{{  value | round(1) }}"
+#sensor 5
+- platform: mqtt
+  state_topic: "bruh/lr/humidity"
+  name: "LR Humidity"
+  unit_of_measurement: "%"
+  value_template: "{{  value | round(1) }}"
+#sensor 6
+- platform: mqtt
+  state_topic: "bruh/lr/ldr"
+  unit_of_measurement: "luxv"
+  name: "LR Light"
+  value_template: "{{  value | round(0) }}"
+#sensor 7:
+- platform: mqtt
+  state_topic: "owntracks/ben6p/ben6p"
+  name: "Ben Nexus 6P Battery"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.batt }}"
+#sensor 8
+- platform: mqtt
+  state_topic: "owntracks/cailin6p/cailin6p"
+  name: "Cailin Nexus 6P Battery"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.batt }}"
+#sensor 9
+- platform: systemmonitor
+  resources:
+    - type: disk_free
+      arg: /home
+    - type: memory_free
+    - type: processor_use
+    - type: last_boot
+#sensor 10
+- platform: mqtt
+  state_topic: "bruh/node1/pir"
+  name: "BR Motion"
+#  payload_on: "motion detected"
+#  payload_off: "standby"
+#sensor 11
+- platform: mqtt
+  state_topic: "bruh/node1/temperature"
+  name: "BR Temperature"
+  unit_of_measurement: "F"
+  value_template: "{{  value | round(1) }}"
+#sensor 12
+- platform: mqtt
+  state_topic: "bruh/node1/humidity"
+  name: "BR Humidity"
+  unit_of_measurement: "%"
+  value_template: "{{  value | round(1) }}"
+#sensor 13
+- platform: mqtt
+  state_topic: "bruh/node1/ldr"
+  unit_of_measurement: "lux"
+  name: "BR Light"
+  value_template: "{{  value | round(0) }}"
+#sensor 14
+- platform: mqtt
+  state_topic: "bruh/node1/sound"
+  unit_of_measurement: "dB"
+  name: "BR Last Sound"
+  value_template: "{{  value | round(0) }}"
+#sensor 15
+- platform: mqtt
+  state_topic: "bruh/node1/soundclap"
+  name: "BR Clap Sound"
+#sensor 16
+- platform: mqtt
+  state_topic: "bruh/partybutt/buttstatus"
+  name: "Party Button"
+#sensor 17
+- platform: speedtest
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+#sensor 18
+- platform: torque
+  name: prius
+  email: !secret email_address
+#sensor 19
+- platform: mqtt
+  state_topic: "bruh/node3/temperature"
+  name: "BtR Temperature"
+  unit_of_measurement: "F"
+  value_template: "{{  value | round(1) }}"
+#sensor 20
+- platform: mqtt
+  state_topic: "bruh/node3/humidity"
+  name: "BtR Humidity"
+  unit_of_measurement: "%"
+  value_template: "{{  value | round(1) }}"
+#sensor 21
+- platform: mqtt
+  state_topic: "bruh/node3/ldr"
+  unit_of_measurement: "lux"
+  name: "BtR Light"
+  value_template: "{{  value | round(0) }}"
+#sensor 22
+- platform: mqtt
+  state_topic: "bruh/node3/pir"
+  name: "BtR Motion"
+##sensor 23
+- platform: google_travel_time
+  api_key: !secret google_time_travel_api_key
+  origin: !secret home_address
+  destination: !secret work_address
+##sensor 24
+- platform: template
+  sensors:
+    gocontrol_door_1:
+      value_template: "{%if states.sensor.gocontrol_door_sensor_1_alarm_level_7.state == '255' %}open{% elif states.sensor.gocontrol_door_sensor_1_alarm_level_7.state == '0' %}closed{% endif %}"
+      friendly_name: "Back Door Sensor"
+    gocontrol_door_2:
+      value_template: "{%if states.sensor.gocontrol_door_sensor_2_alarm_level_8.state == '255' %}open{% elif states.sensor.gocontrol_door_sensor_2_alarm_level_8.state == '0' %}closed{% endif %}"
+      friendly_name: "Front Door Sensor"
+    gocontrol_motion:
+      value_template: "{%if states.sensor.gocontrol_pir_1_alarm_level_6.state == '255' %}motion detected{% elif states.sensor.gocontrol_pir_1_alarm_level_6.state == '0' %}standby{% endif %}"
+      friendly_name: "GoControl Motion"
+    aeotec_multisensor_motion:
+      value_template: "{%if states.sensor.aeotec_multisensor_6_burglar_3.state == '8' %}motion detected{% elif states.sensor.aeotec_multisensor_6_burglar_3.state == '3' %}tamper{% elif states.sensor.aeotec_multisensor_6_burglar_3.state == '0' %}standby{% endif %}"
+      friendly_name: "Aeotec Motion"
+    fibaro_multisensor_motion:  
+      value_template: "{%if states.sensor.fibaro_multisensor_burglar_4.state == '8' %}motion detected{% elif states.sensor.fibaro_multisensor_burglar_4.state == '3' %}tamper{% elif states.sensor.fibaro_multisensor_burglar_4.state == '0' %}standby{% endif %}"
+      friendly_name: "Fibaro Motion"

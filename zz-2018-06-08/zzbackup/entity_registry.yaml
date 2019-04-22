@@ -1,0 +1,4 @@
+media_player.mibox3:
+  name:
+  platform: cast
+  unique_id: 166b2736-a02e-3b2c-bce5-4e8aaf6f4c6d

@@ -1,0 +1,23 @@
+###### Desliga bomba quando enche tank3000
+# 17:44:19 MQT: stat/tank1000/POWER2 = OFF              
+alias: "Tank1000 cheio / tank3000 vazio - bomba on"
+id: tank001
+trigger:
+  - platform: state
+    entity_id: switch.tank1000_sensor_up
+    to: 'off'
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: switch.tank3000_sensor_up
+      state: 'on'
+    - condition: state
+      entity_id: switch.tank3000_sensor_down
+      state: 'on'
+action: 
+  service: switch.turn_on
+  data:
+    entity_id: switch.tank1000_relay  
+
+    

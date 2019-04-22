@@ -1,0 +1,24 @@
+- platform: mqtt
+  state_topic: "owntracks/ben6p/ben6p/event"
+  name: "Prius Status"
+  qos: 0
+  payload_on: "enter"
+  payload_off: "leave"
+  sensor_class: moving
+  value_template: '{% if value_json.desc == "-prius"%} {{value_json.event}} {%- else -%} {%- endif -%}'
+- platform: mqtt
+  state_topic: "owntracks/ben6p/ben6p/event"
+  name: "Civic Status"
+  qos: 0
+  payload_on: "enter"
+  payload_off: "leave"
+  sensor_class: moving
+  value_template: '{% if value_json.desc == "-civic"%} {{value_json.event}} {%- else -%} {%- endif -%}'
+- platform: mqtt
+  state_topic: "owntracks/ben6p/ben6p/event"
+  name: "Keys Status"
+  qos: 0
+  payload_on: "enter"
+  payload_off: "leave"
+  sensor_class: moving
+  value_template: '{% if value_json.desc == "-keys"%} {{value_json.event}} {%- else -%} {%- endif -%}'

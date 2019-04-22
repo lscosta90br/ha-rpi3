@@ -1,0 +1,90 @@
+    sensor.google_travel_time__driving:
+      friendly_name: Tempo para Trabalho
+
+    #  localizacao por gps owntracks
+    device_tracker.leandrocosta_101:
+      # entity_picture: /local/local/lc.jpg
+      friendly_name: Leandro
+
+    device_tracker.diegoestevam_102:
+      entity_picture: /local/local/de.jpg
+      friendly_name: Diego
+      
+    device_tracker.carmencosta_103:
+      entity_picture: /local/local/cc.jpg
+      friendly_name: Mae
+      
+    device_tracker.cybellefontes_104:
+      entity_picture: /local/local/cf.jpg    
+      friendly_name: Cybelle
+    
+    switch.tv_sony_sala:
+      friendly_name: TV Sony kdl-48r485b
+     
+    cover.garagem_lc:
+      device_class: garage
+      friendly_name: Garagem Leandro
+
+# Conexao na rede
+    device_tracker.android22d4569e7b1daf51lan:
+      entity_picture: /local/local/cc.jpg
+      friendly_name: Mae cell
+
+    device_tracker.magnetolan:
+      entity_picture: /local/local/TL-WDR4300-01.jpg
+      friendly_name: TL-WDR4300 
+
+    device_tracker.ec086bbae72c:
+      entity_picture: /local/local/TL-Archer-c50.png
+      friendly_name: TL-Archer-C50-01
+
+    device_tracker.ec086bbae72b:      
+      entity_picture: /local/local/TL-Archer-c50.png
+      friendly_name: TL-Archer-C50-02
+      
+    device_tracker.deadpoolw10lan:
+      entity_picture: /local/local/deadpool.jpg 
+      friendly_name: Computador W10 - DeadPool   
+    
+    device_tracker.f4f524b54027:
+      entity_picture: /local/local/lc.jpg
+      friendly_name: Leandro cell
+
+    device_tracker.androidffeab82361eb4f69lan:
+      entity_picture: /local/local/de.jpg
+      friendly_name: Diego
+   
+    light.regua_oficina_1__dves_2296:
+      icon: mdi:pulse   
+    sensor.sonoff2296_voltage:
+      icon: mdi:power-plug
+    sensor.sonoff2296_energy_total:
+      icon: mdi:calculator
+    sensor.sonoff2296_current:
+      icon: mdi:flash
+    sensor.sonoff2296_energy_yesterday:
+      icon: mdi:flash
+    sensor.sonoff2296_energy_today:
+      icon: mdi:flash
+    sensor.sonoff2296_power:
+      icon: mdi:flash
+    sensor.sonoff2296_power_factor:
+      icon: mdi:flash    
+
+
+    light.regua_laranja__dves_2218:
+      icon: mdi:pulse   
+    sensor.sonoff2218_voltage:
+      icon: mdi:power-plug
+    sensor.sonoff2218_energy_total:
+      icon: mdi:calculator
+    sensor.sonoff2218_current:
+      icon: mdi:flash
+    sensor.sonoff2218_energy_yesterday:
+      icon: mdi:flash
+    sensor.sonoff2218_energy_today:
+      icon: mdi:flash
+    sensor.sonoff2218_power:
+      icon: mdi:flash
+    sensor.sonoff2218_power_factor:
+      icon: mdi:flash    

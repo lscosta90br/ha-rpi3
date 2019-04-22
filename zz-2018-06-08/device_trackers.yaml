@@ -1,0 +1,43 @@
+- platform: owntracks
+  interval_seconds: 10
+  consider_home: 180
+  track_new_devices: yes
+  max_gps_accuracy: 200
+    
+
+- platform: nmap_tracker
+  hosts: 192.168.2.0/24
+  home_interval: 10
+  consider_home: 180
+  track_new_devices: yes
+  interval_seconds: 30
+
+  # exclude: 192.168.1.10
+  # exclude:
+     # - 192.168.1.12
+     # - 192.168.1.13
+  # hosts: 192.168.1.1-25
+  # scan_options: " --privileged -sP "
+  # scan_options: " --privileged -sP -Pn -PR "
+  
+  # platform: owntracks_http
+  # interval_seconds: 10
+  # consider_home: 180
+  # track_new_devices: yes
+    
+    
+    # max_gps_accuracy: 200
+    # waypoints: True
+    # mqtt_topic: "owntracks/#"
+    # events_only: True
+    # waypoint_whitelist:
+      # - leandro
+      # - celularlc_leandro
+    # region_mapping:
+      # cabin: Home
+      # office: Trabalho
+
+  # - platform: owntracks_http
+    # interval_seconds: 10
+    # consider_home: 180
+    # track_new_devices: yes

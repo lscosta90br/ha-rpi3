@@ -1,0 +1,9 @@
+alias: 'Update Available Notifications'
+id: upd001
+trigger:
+  platform: state
+  entity_id: updater.updater
+action:
+  service: notify.notify
+  data:
+    message: 'Update for Home Assistant is available.'

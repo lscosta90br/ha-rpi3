@@ -1,0 +1,23 @@
+alias: "Alarm Trigger"
+trigger:
+  - platform: state
+    entity_id: sensor.fibaro_multisensor_motion
+    state: "motion detected"
+  - platform: state
+    entity_id: sensor.aeotec_multisensor_motion
+    state: "motion detected"
+  - platform: state
+    entity_id: sensor.gocontrol_motion
+    state: "motion detected"
+  - platform: state
+    entity_id: sensor.gocontrol_door_1
+    state: "open"
+  - platform: state
+    entity_id: sensor.gocontrol_door_2
+    state: "open"
+condition:
+  - condition: state
+    entity_id: alarm_control_panel.alarm
+    state: "armed_away"
+action:
+  service: script.alarm_triggered

@@ -1,0 +1,281 @@
+
+celularlc_celular:
+  hide_if_away: true
+  icon:
+  mac:
+  name: celular-lc
+  picture:
+  track: false
+
+celularlc_celle:
+  hide_if_away: true
+  icon:
+  mac:
+  name: celular-lc
+  picture:
+  track: false
+
+celularlc_leandro:
+  hide_if_away: true
+  icon:
+  mac:
+  name: celular-lc
+  picture:
+  track: false
+
+leandrocosta_101:
+  hide_if_away: false
+  icon:
+  mac:
+  name: leandrocosta
+  gravatar: lscosta@gmail.com
+  picture:
+  track: true
+
+carmencosta_103:
+  hide_if_away: false
+  icon:
+  mac:
+  name: carmencosta
+  picture:
+  track: true
+
+diegoestevam_102:
+  hide_if_away: false
+  icon:
+  mac:
+  name: diegoestevam
+  picture:
+  track: true
+
+cybellefontes_104:
+  hide_if_away: false
+  icon:
+  mac:
+  name: cybellefontes
+  picture:
+  track: true
+
+0011321bd5f3:
+  hide_if_away: false
+  icon:
+  mac: 00:11:32:1B:D5:F3
+  name: 0011321bd5f3
+  picture:
+  track: false
+
+magnetolan:
+  hide_if_away: false
+  icon:
+  mac: 64:66:B3:C2:49:D0
+  name: magneto.lan
+  picture:
+  track: true
+
+android22d4569e7b1daf51lan:
+  hide_if_away: false
+  icon:
+  mac: 18:89:5B:0F:EE:90
+  name: android-22d4569e7b1daf51.lan
+  picture:
+  track: true
+
+f4f524b54027:
+  hide_if_away: true
+  icon:
+  mac: F4:F5:24:B5:40:27
+  name: f4f524b54027
+  picture:
+  track: true
+
+mibox301lan:
+  hide_if_away: true
+  icon:
+  mac: 00:9E:C8:B4:EF:8E
+  name: MIBOX3-01.lan
+  picture:
+  track: false
+
+sonoff2222lan:
+  hide_if_away: true
+  icon:
+  mac: 2C:3A:E8:05:06:57
+  name: sonoff-2222.lan
+  picture:
+  track: false
+
+deadpoolw10lan:
+  hide_if_away: false
+  icon:
+  mac: FC:AA:14:C9:1F:58
+  name: deadpool-w10.lan
+  picture:
+  track: true
+
+tanque30000787lan:
+  hide_if_away: true
+  icon:
+  mac: 5C:CF:7F:5A:03:13
+  name: tanque3000-0787.lan
+  picture:
+  track: false
+
+androidffeab82361eb4f69lan:
+  hide_if_away: false
+  icon:
+  mac: 68:C4:4D:C8:48:45
+  name: android-ffeab82361eb4f69.lan
+  picture:
+  track: true
+
+sonoff2220lan:
+  hide_if_away: false
+  icon:
+  mac: 2C:3A:E8:07:A2:0B
+  name: sonoff-2220.lan
+  picture:
+  track: false
+
+sonoff2223lan:
+  hide_if_away: false
+  icon:
+  mac: 5C:CF:7F:42:82:76
+  name: sonoff-2223.lan
+  picture:
+  track: false
+
+000f13053e43:
+  hide_if_away: false
+  icon:
+  mac: 00:0F:13:05:3E:43
+  name: 000f13053e43
+  picture:
+  track: false
+
+sonoff5797lan:
+  hide_if_away: false
+  icon:
+  mac: DC:4F:22:83:F6:A5
+  name: sonoff-5797.lan
+  picture:
+  track: false
+
+caixa10002479lan:
+  hide_if_away: false
+  icon:
+  mac: 5C:CF:7F:5A:09:AF
+  name: caixa1000-2479.lan
+  picture:
+  track: false
+
+caixa30006560lan:
+  hide_if_away: false
+  icon:
+  mac: 5C:CF:7F:2C:79:A0
+  name: caixa3000-6560.lan
+  picture:
+  track: false
+
+sonoff2608lan:
+  hide_if_away: false
+  icon:
+  mac: DC:4F:22:83:AA:30
+  name: sonoff-2608.lan
+  picture:
+  track: false
+
+garagem4944lan:
+  hide_if_away: false
+  icon:
+  mac: 60:01:94:2B:B3:50
+  name: garagem-4944.lan
+  picture:
+  track: false
+
+sonoff22961633lan:
+  hide_if_away: false
+  icon:
+  mac: 2C:3A:E8:07:66:61
+  name: sonoff-2296-1633.lan
+  picture:
+  track: false
+
+sonoff3198marvelscorp:
+  hide_if_away: false
+  icon:
+  mac: 5C:CF:7F:5A:0C:7E
+  name: sonoff-3198.marvels.corp
+  picture:
+  track: false
+
+ec086bbae72c:
+  hide_if_away: false
+  icon:
+  mac: EC:08:6B:BA:E7:2C
+  name: ec086bbae72c
+  picture:
+  track: true
+
+ec086bbae72b:
+  hide_if_away: false
+  icon:
+  mac: EC:08:6B:BA:E7:2B
+  name: ec086bbae72b
+  picture:
+  track: true
+
+stormnbmarvelscorp:
+  hide_if_away: false
+  icon:
+  mac: 00:23:14:D0:51:30
+  name: storm-nb.marvels.corp
+  picture:
+  track: true
+
+0800276bf68d:
+  hide_if_away: false
+  icon:
+  mac: 08:00:27:6B:F6:8D
+  name: 0800276bf68d
+  picture:
+  track: false
+
+sonoff22183074marvelscorp:
+  hide_if_away: false
+  icon:
+  mac: 2C:3A:E8:07:2C:02
+  name: sonoff-2218-3074.marvels.corp
+  picture:
+  track: false
+
+08_00_27_34_13_7a:
+  hide_if_away: false
+  icon:
+  mac: 08:00:27:34:13:7A
+  name: 08 00 27 34 13 7a
+  picture:
+  track: true
+
+b0_4e_26_64_e8_7d:
+  hide_if_away: false
+  icon:
+  mac: B0:4E:26:64:E8:7D
+  name: b0 4e 26 64 e8 7d
+  picture:
+  track: true
+
+30_4b_07_a5_08_bd:
+  hide_if_away: false
+  icon:
+  mac: 30:4B:07:A5:08:BD
+  name: 30 4b 07 a5 08 bd
+  picture:
+  track: true
+
+48_49_c7_29_35_0e:
+  hide_if_away: false
+  icon:
+  mac: 48:49:C7:29:35:0E
+  name: 48 49 c7 29 35 0e
+  picture:
+  track: true

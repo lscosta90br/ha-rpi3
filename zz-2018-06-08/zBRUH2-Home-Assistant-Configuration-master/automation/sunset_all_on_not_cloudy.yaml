@@ -1,0 +1,14 @@
+alias: "Sunset, all on, not cloudy"
+trigger:
+  platform: sun
+  event: sunset
+  offset: "-00:30:00"
+condition:
+  - condition: numeric_state
+    entity_id: sensor.weather_cloud_coverage
+    below: 90
+  - condition: state
+    entity_id: group.all_devices
+    state: "home"
+action:
+  service: script.all_on 

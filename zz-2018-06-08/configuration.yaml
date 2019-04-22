@@ -1,0 +1,134 @@
+homeassistant:
+  name: Home
+  latitude: -22.8111
+  longitude: -43.3588
+  elevation: 0
+  unit_system: metric
+  time_zone: America/Sao_Paulo
+  customize: !include customize.yaml 
+
+zone:
+  - name: Trabalho
+    latitude: -22.7973284
+    longitude: -43.3545091
+    radius: 250
+    icon: mdi:worker
+
+  - name: CasaDiego
+    latitude: -22.8166341  
+    longitude: -43.3581858
+    radius: 250
+    icon: mdi:robot  
+
+  - name: CasaCafy
+    latitude: -22.3304326
+    longitude: -49.0465708
+    radius: 250
+    icon: mdi:rocket    
+
+  - name: USPFOB1
+    latitude: -22.3441845
+    longitude: -49.0534044
+    radius: 300
+    icon: mdi:rocket        
+
+  - name: USPFOB2
+    latitude: -22.3346538
+    longitude: -49.0588068
+    radius: 300
+    icon: mdi:rocket        
+
+mqtt:
+  broker: core-mosquitto
+  port: 1883
+  client_id: home-assistant-1
+  keepalive: 60
+  username: ha
+  password: 1q2w3e
+
+panel_iframe:
+  configurator:
+    title: Configurator
+    icon: mdi:wrench
+    url: http://192.168.2.25:3218
+  nodered:
+    title: "Node-Rede"
+    icon: mdi:shuffle-variant
+    url: http://192.168.2.25:1880
+  router:
+    title: 'Router'
+    icon: mdi:router-wireless
+    url: 'http://192.168.2.100'
+  sonweb:
+    title: SonWEB
+    icon: mdi:lightbulb-on
+    url: http://192.168.2.25:9541
+  
+http:
+  api_password: azul123
+  # ssl_certificate: !secret ssl_path
+  # ssl_key: !secret ssl_key  
+# ifttt:
+  # key: !secret ifttt_key
+# zwave:
+  # usb_path: /dev/ttyACM0
+  # config_path: /srv/hass/hass_venv/lib/python3.4/site-packages/libopenzwave-0.3.1-py3.4-linux-armv7l.egg/config
+
+  
+####################################################
+#                                                  #
+#                     Includes                     #
+#                                                  #
+####################################################  
+  
+###  Devices  ###
+
+# alarm_control_panel: !include alarm_control_panel.yaml
+# alexa: !include alexa.yaml
+# binary_sensor: !include binary_sensors.yaml
+# camera: !include cameras.yaml
+cover: !include covers.yaml
+device_tracker: !include device_trackers.yaml
+light: !include lights.yaml
+# media_player: !include media_players.yaml  
+sensor: !include sensors.yaml  
+switch: !include switchs.yaml
+group: !include groups.yaml
+automation: !include automations.yaml
+#input_boolean: !include input_boolean.yaml
+input_select: !include input_select.yaml
+# notify: !include notify.yaml
+# scene: !include scenes.yaml
+script: !include scripts.yaml
+# shell_command: !include shell_commands.yaml  
+
+  
+
+  
+####################################################
+#                                                  #
+#                     Enables                      #
+#                                                  #
+####################################################
+
+config:
+conversation:
+discovery:
+frontend:  
+history:
+logbook:
+logger:
+  # homeassistant.components.mqtt: warn
+map:
+ purge_days: 3
+recorder:
+sun:
+updater:
+
+#introduction:
+tts:
+  - platform: google
+ 
+# Cloud
+cloud:
+

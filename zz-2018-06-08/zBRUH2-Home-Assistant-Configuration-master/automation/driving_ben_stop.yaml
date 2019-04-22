@@ -1,0 +1,8 @@
+alias: "Ben Driving"
+trigger:
+  platform: state
+  entity_id: input_select.ben_status
+  from: "driving"
+  to: "standby"
+action:
+  service: script.driving_ben_stop
