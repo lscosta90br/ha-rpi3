@@ -1,0 +1,59 @@
+default_view:
+  name: Principal
+  icon: mdi:home
+  view: true
+  entities:
+    - sun.sun
+
+
+##### INICIO - Grupo Controle equipamento TI #####
+Regua Branca 3201 - DeadPool PC:
+  view: false
+  # control: hidden
+  entities:
+    - light.regua_branca_3201
+    - sensor.pow_3201_voltage
+    - sensor.pow_3201_power
+    - sensor.pow_3201_current      
+    - sensor.pow_3201_energy_today
+    - sensor.pow_3201_energy_yesterday
+    - sensor.pow_3201_energy_total
+    - sensor.pow_3201_power_factor
+
+Regua Laranja 3202 - TI:
+  view: false
+  # control: hidden
+  entities:
+    - light.regua_laranja_3202
+    - sensor.pow_3202_voltage
+    - sensor.pow_3202_power
+    - sensor.pow_3202_current      
+    - sensor.pow_3202_energy_today
+    - sensor.pow_3202_energy_yesterday
+    - sensor.pow_3202_energy_total
+    - sensor.pow_3202_power_factor
+
+
+Sonoff 3203 - Mesa DeadPool PC :
+  view: false
+    # control: hidden
+  entities:
+    - light.sonoff_3203 
+
+Sonoff RF 3204 - TI:
+  view: false
+    # control: hidden
+  entities:
+    - light.sonoff_rf_3204
+
+Controle equipamentos TI:
+  icon: mdi:upload-network
+  view: true
+  entities:
+    - group.regua_branca_3201_deadpool_pc
+    - group.regua_laranja_3202_ti
+    - group.sonoff_3203_mesa_deadpool_pc
+    - group.sonoff_rf_3204_ti
+##### FIM - Grupo Controle equipamento TI #####   
+   
+

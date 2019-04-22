@@ -1,0 +1,36 @@
+- platform: mqtt
+  # DVES_%06X
+  name: "Regua Branca 3201"
+  state_topic: "stat/pow-3201/POWER"
+  command_topic: "cmnd/pow-3201/POWER"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+- platform: mqtt
+  name: "Regua Laranja 3202"
+  state_topic: "stat/pow-3202/POWER"
+  command_topic: "cmnd/pow-3202/POWER"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+- platform: mqtt
+  name: "Sonoff 3203"
+  state_topic: "stat/sonoff-3203/POWER1"
+  command_topic: "cmnd/sonoff-3203/POWER1"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+- platform: mqtt
+  name: "Sonoff RF 3204"
+  state_topic: "stat/sonoff-3204/POWER1"
+  command_topic: "cmnd/sonoff-3204/POWER1"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true  

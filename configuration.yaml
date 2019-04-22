@@ -1,0 +1,48 @@
+homeassistant:
+  name: Home
+  latitude: !secret hlatitude
+  longitude: !secret hlongitude
+  elevation: 0
+  unit_system: metric
+  time_zone: !secret htime_zone
+  customize: !include customize.yaml
+
+
+
+mqtt:
+  broker: core-mosquitto
+  port: 1883
+  client_id: home-assistant-1
+  keepalive: 60
+  username: !secret mosquitto_username
+  password: !secret mosquitto_password
+
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Show the introduction message on startup.
+# introduction:
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+# http:
+#   base_url: example.duckdns.org:8123
+
+# Discover some devices automatically
+discovery:
+
+# Sensors
+# sensor:
+  # Weather prediction
+  # - platform: yr
+
+# Text to speech
+tts:
+  - platform: google
+
+light: !include lights.yaml
+sensor: !include sensors.yaml
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+zone: !include zones.yaml

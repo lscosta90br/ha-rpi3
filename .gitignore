@@ -1,0 +1,20 @@
+# vscode
+.vscode/
+*.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+questionario.code-workspace*
+
+##### INICIO - exclusao homeassistant
+# Ignore folders.
+.storage
+.cloud
+.google.token
+.HA_VERSION
+secrets.yaml
+##### FIM - exclusao homeassistant
+
+#pycharm
+*.idea
