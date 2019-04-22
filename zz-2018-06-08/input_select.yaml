@@ -1,7 +1,0 @@
-  bedroom_lamp_scheme:
-    name: 'Select Scheme'
-    options:
-      - Default
-      - Cycle Colours Clockwise
-      - Cycle Colours Counter Clockwise
-      - Random Colours

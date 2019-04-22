@@ -15,7 +15,8 @@ questionario.code-workspace*
 .HA_VERSION
 secrets.yaml
 home-assistant_*.db
-zz-2018-06-08*.*
+
+zz-2018-06-08
 ##### FIM - exclusao homeassistant
 
 #pycharm

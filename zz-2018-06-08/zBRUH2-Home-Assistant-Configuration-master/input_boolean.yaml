@@ -1,6 +1,0 @@
-####Booleans####
-#input_boolean:
-#  restart_ha:
-#    name: Restart Home Assistant
-#    initial: off
-#    icon: mdi:power

@@ -1,8 +1,0 @@
-###### Reload automaçãos
-  reload_automations:
-    alias: Reload Automations
-    sequence:
-      - alias: Reload-Automations
-        service: automation.reload
-              
-    
